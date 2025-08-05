@@ -1,1 +1,9 @@
-// Chapter - 01: Inceptionn
+// Chapter - 01: Inception
+
+1. Basic manual project setup
+2. CDN
+3. in dept of React
+    - React.createElement('h1', {}, 'Hello World')
+    - ReactDOM.createRoot(document.getElementById('root'))
+    - root.render(parent)
+4. check about crossorigin 
