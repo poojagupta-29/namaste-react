@@ -1,0 +1,197 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5722; /* Orange-ish food theme */
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav-items ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-items li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-items li:hover {
+  color: #ffd580; /* Light yellow on hover */
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* ------------------search */
+/* Full page center align */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input style */
+.search input {
+  padding: 12px 20px;
+  width: 600px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* Focus effect */
+.search input:focus {
+  border-color: #ff5722; /* Orange food theme */
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.4);
+}
+
+
+/* res cards */
+.restaurant-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.res-items {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.item-info{
+    padding: 0 10px;
+}
+
+.res-items:hover {
+  transform: scale(1.03);
+}
+
+.res-items img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Title */
+.res-items h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+/* Rating + Time */
+.res-items p {
+  display: inline-block;
+  color: #333;
+  font-weight: 500;
+}
+
+.res-items span {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 5px;
+}
+
+span.company-name {
+  display: block;
+  margin: 8px 0 0;
+  color: #444;
+}
+
+span.location {
+  display: block;
+  margin: 2px 0 15px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .res-items img {
+    height: 140px;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #ff5722; /* Food theme orange */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* filter btn */
+.filter-btn {
+  padding: 15px 50px;
+  background-color: #ff4d00; /* same orange as header */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+  margin: 0 auto;
+}
+
+.filter-btn:hover {
+  background-color: #e64400; /* slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+.filter-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
