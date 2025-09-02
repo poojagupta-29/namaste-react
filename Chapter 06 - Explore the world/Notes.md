@@ -23,3 +23,5 @@
 
 2. CORS:
     - if we try to access other domain, with out domain, whohc is a mismatch we use CORS to excute our code or else it will block our code and throe error in console
+
+    - corsproxy.io - we append this before URL of an API used, so that when hosting this, the cors error will not be shown
