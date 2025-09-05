@@ -453,3 +453,81 @@ span.location {
   /* circle */
   display: block;
 }
+
+/* about us */
+.aboutus {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.about-title {
+  font-size: 30px;
+}
+
+.about-cards {
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  display: grid;
+}
+
+.about-cards .card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.about-cards .card:hover {
+  transform: translateY(-4px);
+}
+
+.about-cards img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-cards .card-content {
+  padding: 16px;
+}
+
+.about-cards .card-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.about-cards .card-subtitle {
+  margin: 4px 0 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #444;
+}
+
+.about-cards .card-rating {
+  font-size: 15px;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.about-cards .card-delivery {
+  font-size: 15px;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.about-cards .card-delivery span {
+  color: #555;
+  font-weight: normal;
+}
+
+.about-cards .card-location {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
