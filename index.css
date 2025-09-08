@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Basic Reset */
 * {
   margin: 0;
@@ -25,6 +27,10 @@ a {
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 100%;
 }
 
 .wrapper {
@@ -530,4 +536,201 @@ span.location {
   font-size: 14px;
   color: #666;
   margin-top: 8px;
+}
+
+/* status css */
+.status {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  min-width: 70px;
+}
+
+.online {
+  background-color: #28a745;
+  /* Green */
+}
+
+.offline {
+  background-color: #dc3545;
+  /* Red */
+}
+
+/* offline css */
+.offline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* Emoji Animation */
+.offline-container .emoji {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Title Animation */
+.offline-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bouncing Retry Button */
+.offline-container button {
+  background: #fadfdf;
+  color: #ff6f61;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: bounce 2s infinite;
+  margin-top: 20px;
+}
+
+.offline-container button:hover {
+  background: #ffe3d3;
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* contact us page */
+/* Orange-Themed Funky Contact Us Page CSS */
+.contact-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  /* soft orange gradient */
+  border-radius: 15px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-container h1 {
+  margin-bottom: 10px;
+  color: #ff6600;
+  /* bold orange */
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffad66;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px 25px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ff8533;
+  transform: scale(1.05);
+}
+
+.contact-note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #777;
 }

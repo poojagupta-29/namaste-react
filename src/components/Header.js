@@ -1,20 +1,23 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router";
+import { useState } from "react";
+import { Link } from "react-router";
+
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Header = () => {
 
   const [toggleBtnName, setToggleBtnName] = useState('Login')
-
-  useEffect(() => {
-    console.log("Header useEffect rendered")
-  }, [])
+  const onlineStatus = useOnlineStatus();
 
   return (
     <header className="header">
       <div className="logo">FoodyHub</div>
       <div className="nav-items">
         <ul>
+          <li className={`{status ${onlineStatus ? 'online' : 'offline'}}`}>
+            {onlineStatus ? 'Online 🟢' : 'Offline 🔴'}
+          </li>
+
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About Us</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
